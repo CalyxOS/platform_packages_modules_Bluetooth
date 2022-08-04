@@ -679,6 +679,25 @@ public final class Utils {
         return checkCallerIsSystemOrActiveOrManagedUser(context, tag + "." + method + "()");
     }
 
+    public static boolean checkCallerIsPermittedUser(Context context) {
+        // TODO: Consider checking for a property of the managed profile instead of blanket allow.
+        // Currently, all managed profiles are allowed.
+        return checkCallerIsSystemOrActiveOrManagedUser(context);
+    }
+
+    public static boolean checkCallerIsPermittedUser(Context context, String tag) {
+        final boolean res = checkCallerIsPermittedUser(context);
+        if (!res) {
+            Log.w(TAG, tag + " - Not allowed for"
+                    + " non-active user and non-system and unauthorized managed user");
+        }
+        return res;
+    }
+
+    public static boolean callerIsPermittedUser(Context context, String tag, String method) {
+        return checkCallerIsPermittedUser(context, tag + "." + method + "()");
+    }
+
     public static boolean checkServiceAvailable(ProfileService service, String tag) {
         if (service == null) {
             Log.w(TAG, tag + " - Not present");
