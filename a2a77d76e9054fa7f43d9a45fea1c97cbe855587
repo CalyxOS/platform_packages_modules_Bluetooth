@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9a75d482_77247c02",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2022-08-31T03:37:31Z",
+      "side": 1,
+      "message": "Not immediately ready for use, but submitting for possible reference in the future.\n\nAn example use case is being able to use a Bluetooth headset during a Signal call when Signal is in a work profile. In 12L, this is not ordinarily possible.\n\nThis compiles and, at least in 12L, it works (not verified for 13); however, it leads to behavior that is *more permissive* than AOSP. If this is implemented, it would likely be better to gatekeep it via a per-profile setting for Bluetooth similar to the per-profile Location option that is adjustable via Apps \u0026 content.\n\nCode-wise, the functions this adds and uses for checking access are likely poorly-named, and the function used previously is simply mass-replaced by the new one; so, the code would likely also need to be reworked.",
+      "revId": "a2a77d76e9054fa7f43d9a45fea1c97cbe855587",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
