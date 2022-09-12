@@ -16,6 +16,24 @@
       "message": "Maybe wrap in `mBluetooth !\u003d null`\n\nhttps://gitlab.com/CalyxOS/calyxos/-/issues/1092#note_1091476581",
       "revId": "5dd5ae99109132bdc6572c834e6c254db30ea0e3",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6145e61f_2793e9ff",
+        "filename": "service/java/com/android/server/bluetooth/BluetoothManagerService.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 533,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2022-09-12T12:06:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4b5ad766_0ce4eea0",
+      "revId": "5dd5ae99109132bdc6572c834e6c254db30ea0e3",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
