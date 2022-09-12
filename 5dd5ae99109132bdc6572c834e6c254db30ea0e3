@@ -3,6 +3,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "9c95072f_1b06d0f6",
+        "filename": "service/java/com/android/server/bluetooth/BluetoothManagerService.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 532,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-09-12T12:15:31Z",
+      "side": 1,
+      "message": "Should leave this comment in",
+      "revId": "5dd5ae99109132bdc6572c834e6c254db30ea0e3",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "4b5ad766_0ce4eea0",
         "filename": "service/java/com/android/server/bluetooth/BluetoothManagerService.java",
         "patchSetId": 2
