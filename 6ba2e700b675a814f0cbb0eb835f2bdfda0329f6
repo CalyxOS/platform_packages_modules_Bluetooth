@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f2650e11_0ee0a75d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2022-10-24T15:24:30Z",
+      "side": 1,
+      "message": "Per Oliver, why not just change checkCallerIsSystemOrActiveUser\u0027s functionality instead of changing all of these and adding a new function? Before doing that, make sure that this actually replaced every instance of `checkCallerIsSystemOrActiveUser` so that there wouldn\u0027t be knock-on effects.",
+      "revId": "6ba2e700b675a814f0cbb0eb835f2bdfda0329f6",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
