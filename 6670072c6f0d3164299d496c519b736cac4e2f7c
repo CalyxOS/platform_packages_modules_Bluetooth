@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "41ff928e_bdab71cf",
+        "filename": "system/stack/avrc/avrc_pars_ct.cc",
+        "patchSetId": 1
+      },
+      "lineNbr": 244,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2022-12-06T14:58:40Z",
+      "side": 0,
+      "message": "Checkout this whole file to r16, the merge isn\u0027t applied cleanly for some reason.",
+      "revId": "6670072c6f0d3164299d496c519b736cac4e2f7c",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
