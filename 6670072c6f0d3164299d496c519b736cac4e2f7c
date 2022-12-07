@@ -16,6 +16,24 @@
       "message": "Checkout this whole file to r16, the merge isn\u0027t applied cleanly for some reason.",
       "revId": "6670072c6f0d3164299d496c519b736cac4e2f7c",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ec31ab05_e7f2a063",
+        "filename": "system/stack/avrc/avrc_pars_ct.cc",
+        "patchSetId": 1
+      },
+      "lineNbr": 244,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-12-07T00:16:36Z",
+      "side": 0,
+      "message": "Done. I checked out system/ from r16 and that matched, we don\u0027t modify anything else.",
+      "parentUuid": "41ff928e_bdab71cf",
+      "revId": "6670072c6f0d3164299d496c519b736cac4e2f7c",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
