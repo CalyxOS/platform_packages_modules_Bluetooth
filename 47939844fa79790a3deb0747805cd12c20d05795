@@ -16,6 +16,24 @@
       "message": "Something happened in the ASB merge, going to double check before clicking submit here.",
       "revId": "47939844fa79790a3deb0747805cd12c20d05795",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6650634d_ab0b3da8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-03-20T16:32:30Z",
+      "side": 1,
+      "message": "I broke this months ago, in https://review.calyxos.org/c/CalyxOS/platform_packages_modules_Bluetooth/+/14782/2/service/java/com/android/server/bluetooth/BluetoothManagerService.java\n\nBad conflict resolution,",
+      "parentUuid": "6ec2f517_78789414",
+      "revId": "47939844fa79790a3deb0747805cd12c20d05795",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
