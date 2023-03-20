@@ -646,7 +646,8 @@ public class BluetoothManagerService extends IBluetoothManager.Stub {
         }
 
         mBluetoothAirplaneModeListener = new BluetoothAirplaneModeListener(
-                this, mBluetoothHandlerThread.getLooper(), context);
+                this, mBluetoothHandlerThread.getLooper(), context,
+                mBluetoothNotificationManager);
 
         int systemUiUid = -1;
         // Check if device is configured with no home screen, which implies no SystemUI.
