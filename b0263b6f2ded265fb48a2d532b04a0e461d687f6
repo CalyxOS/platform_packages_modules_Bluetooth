@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "955b3821_87f92a06",
+        "filename": "android/app/src/com/android/bluetooth/opp/BluetoothOppUtility.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-09-06T19:44:54Z",
+      "side": 1,
+      "message": "Actual commit: https://android.googlesource.com/platform/packages/modules/Bluetooth/+/2fdc7b62310c0e524203d43de9be3b6734507d9c\n\nMismerge? (by us, or them)",
+      "revId": "b0263b6f2ded265fb48a2d532b04a0e461d687f6",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
