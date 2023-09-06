@@ -16,6 +16,24 @@
       "message": "Actual commit: https://android.googlesource.com/platform/packages/modules/Bluetooth/+/2fdc7b62310c0e524203d43de9be3b6734507d9c\n\nMismerge? (by us, or them)",
       "revId": "b0263b6f2ded265fb48a2d532b04a0e461d687f6",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "85eeed3e_3e4f4dca",
+        "filename": "android/app/src/com/android/bluetooth/opp/BluetoothOppUtility.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2023-09-06T19:50:46Z",
+      "side": 1,
+      "message": "The commit in -security contains this line, while the commit in QPR doesn not. I went with -security since it changes the same check in the same way.",
+      "parentUuid": "955b3821_87f92a06",
+      "revId": "b0263b6f2ded265fb48a2d532b04a0e461d687f6",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
