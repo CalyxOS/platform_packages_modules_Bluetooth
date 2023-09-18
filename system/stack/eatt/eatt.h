@@ -68,6 +68,7 @@ class EattChannel {
         ind_confirmation_timer_(NULL) {
     EattChannelSetTxMTU(tx_mtu);
     cl_cmd_q_ = std::deque<tGATT_CMD_Q>();
+    EattChannelSetTxMTU(tx_mtu);
   }
 
   ~EattChannel() {
