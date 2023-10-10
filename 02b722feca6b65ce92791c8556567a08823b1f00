@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bdf56fac_08ad6247",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-10-10T18:01:07Z",
+      "side": 1,
+      "message": "30 second timeout works.",
+      "revId": "02b722feca6b65ce92791c8556567a08823b1f00",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5796eb7e_e40540e4",
+        "filename": "service/src/com/android/server/bluetooth/BluetoothManagerService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 793,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-10-10T18:01:07Z",
+      "side": 1,
+      "message": "Still needs to be adapted, but doesn\u0027t have to be a blocker.",
+      "revId": "02b722feca6b65ce92791c8556567a08823b1f00",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
