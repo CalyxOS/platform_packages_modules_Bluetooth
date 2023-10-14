@@ -71,6 +71,7 @@ import android.database.ContentObserver;
 import android.os.Binder;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.HandlerExecutor;
 import android.os.HandlerThread;
 import android.os.IBinder;
 import android.os.Looper;
@@ -789,7 +790,7 @@ public class BluetoothManagerService extends IBluetoothManager.Stub {
         if (bluetoothTimeoutMillis != 0) {
             final long timeout = SystemClock.elapsedRealtime() + bluetoothTimeoutMillis;
             alarmManager.setExactAndAllowWhileIdle(AlarmManager.ELAPSED_REALTIME_WAKEUP, timeout,
-                    TAG, mHandler, mBluetoothTimeoutListener);
+                    TAG, new HandlerExecutor(mHandler), null, mBluetoothTimeoutListener);
         }
     }
 
