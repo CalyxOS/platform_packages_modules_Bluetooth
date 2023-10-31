@@ -1,5 +1,23 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f7a14f33_f38d6d83",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-10-31T16:59:34Z",
+      "side": 1,
+      "message": "There are multiple areas of BluetoothManagerService.java that try to call mBluetoothAirplaneModeListener without checking if it is null. This prevents that from causing crashes by making sure it is never null.",
+      "revId": "1a85b38b43d371997e9792b8bc42b00e8630b786",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ],
   "submitRequirementResults": [
     {
       "submitRequirement": {
