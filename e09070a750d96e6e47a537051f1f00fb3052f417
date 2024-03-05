@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "682f77d8_4a8a9d78",
+        "filename": "service/src/com/android/server/bluetooth/BluetoothManagerService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 680,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-03-05T19:34:53Z",
+      "side": 1,
+      "message": "PS2 got rid of this.",
+      "revId": "e09070a750d96e6e47a537051f1f00fb3052f417",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
