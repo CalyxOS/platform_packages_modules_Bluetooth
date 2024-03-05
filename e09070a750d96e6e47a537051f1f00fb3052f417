@@ -16,6 +16,24 @@
       "message": "PS2 got rid of this.",
       "revId": "e09070a750d96e6e47a537051f1f00fb3052f417",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4ab6cebe_e50cf34c",
+        "filename": "service/src/com/android/server/bluetooth/BluetoothManagerService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 680,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2024-03-05T19:42:09Z",
+      "side": 1,
+      "message": "Fixed",
+      "parentUuid": "682f77d8_4a8a9d78",
+      "revId": "e09070a750d96e6e47a537051f1f00fb3052f417",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
