@@ -16,6 +16,24 @@
       "message": "Before mBluetooth was removed, it was assigned like this: `mBluetooth \u003d IBluetooth.Stub.asInterface(service);`",
       "revId": "39f393e8da3622caca24cb8838ae2ecb514da148",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8c981e78_fcf18375",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-03-05T21:42:05Z",
+      "side": 1,
+      "message": "(relevant aosp commit 042146dcfb955858e19aa8a3fb07b6d4bfd1e981 )",
+      "parentUuid": "dad80d67_735ff3b6",
+      "revId": "39f393e8da3622caca24cb8838ae2ecb514da148",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
