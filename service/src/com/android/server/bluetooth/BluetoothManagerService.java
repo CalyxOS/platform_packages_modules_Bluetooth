@@ -706,10 +706,7 @@ class BluetoothManagerService {
             try {
                 // Fetch adapter connection state synchronously and assume disconnected on error
                 if (mAdapter == null) return;
-                final SynchronousResultReceiver<Integer> recv = SynchronousResultReceiver.get();
-                mAdapter.getAdapterConnectionState(recv);
-                int adapterConnectionState = recv.awaitResultNoInterrupt(getSyncTimeout())
-                        .getValue(BluetoothAdapter.STATE_DISCONNECTED);
+                int adapterConnectionState = mAdapter.getConnectionState();
 
                 if (getState() == BluetoothAdapter.STATE_ON
                         && adapterConnectionState == BluetoothAdapter.STATE_DISCONNECTED) {
