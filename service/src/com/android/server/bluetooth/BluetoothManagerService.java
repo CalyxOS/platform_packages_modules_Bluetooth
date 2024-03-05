@@ -707,7 +707,7 @@ class BluetoothManagerService {
                 // Fetch adapter connection state synchronously and assume disconnected on error
                 if (mAdapter == null) return;
                 final SynchronousResultReceiver<Integer> recv = SynchronousResultReceiver.get();
-                mAdapter.getAdapterConnectionState(recv);
+                //mAdapter.getAdapterConnectionState(recv);
                 int adapterConnectionState = recv.awaitResultNoInterrupt(getSyncTimeout())
                         .getValue(BluetoothAdapter.STATE_DISCONNECTED);
 
@@ -715,7 +715,7 @@ class BluetoothManagerService {
                         && adapterConnectionState == BluetoothAdapter.STATE_DISCONNECTED) {
                     disable(mContext.getAttributionSource().getPackageName(), true);
                 }
-            } catch (RemoteException | TimeoutException e) {
+            } catch (TimeoutException e) {
                 Slog.e(TAG, "setBluetoothTimeout() failed", e);
             }
         }
