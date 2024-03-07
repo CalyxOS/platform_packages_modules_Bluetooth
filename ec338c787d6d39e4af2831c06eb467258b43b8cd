@@ -16,6 +16,24 @@
       "message": "nit: Unused import",
       "revId": "ec338c787d6d39e4af2831c06eb467258b43b8cd",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7293db16_3788ae41",
+        "filename": "service/src/com/android/server/bluetooth/BluetoothManagerService.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2024-03-07T21:35:25Z",
+      "side": 1,
+      "message": "Fixed",
+      "parentUuid": "44ef241b_4a7eae4f",
+      "revId": "ec338c787d6d39e4af2831c06eb467258b43b8cd",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
