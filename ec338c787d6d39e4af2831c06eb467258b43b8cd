@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "44ef241b_4a7eae4f",
+        "filename": "service/src/com/android/server/bluetooth/BluetoothManagerService.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-03-07T14:48:09Z",
+      "side": 1,
+      "message": "nit: Unused import",
+      "revId": "ec338c787d6d39e4af2831c06eb467258b43b8cd",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
