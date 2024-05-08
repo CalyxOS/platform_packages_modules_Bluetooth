@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d2456301_3951ffce",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-05-08T19:24:15Z",
+      "side": 1,
+      "message": "Does not fix Bluetooth file-sending for me, at least on its own. Maybe it fixes something else.",
+      "revId": "4983fbbe731c10542f106cf9df9f7c6fea97ada0",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
