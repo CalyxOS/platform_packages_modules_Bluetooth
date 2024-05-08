@@ -34,6 +34,24 @@
       "parentUuid": "d2456301_3951ffce",
       "revId": "4983fbbe731c10542f106cf9df9f7c6fea97ada0",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9984e47b_fc19f9a6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-05-08T19:34:57Z",
+      "side": 1,
+      "message": "Lineage is on a roll with new Bluetooth changes! 😊 So I\u0027ll wait a bit.",
+      "parentUuid": "3dcbdacf_a85d786a",
+      "revId": "4983fbbe731c10542f106cf9df9f7c6fea97ada0",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
