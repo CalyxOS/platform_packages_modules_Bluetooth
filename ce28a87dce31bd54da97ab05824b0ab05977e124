@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f50f5d0d_984d1c95",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-05-08T20:06:01Z",
+      "side": 1,
+      "message": "Lineage folks found this. It works for me to fix calyxos#2325.",
+      "revId": "ce28a87dce31bd54da97ab05824b0ab05977e124",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
