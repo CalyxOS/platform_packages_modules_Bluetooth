@@ -88,6 +88,23 @@
       "parentUuid": "e2dfb488_317d7498",
       "revId": "4983fbbe731c10542f106cf9df9f7c6fea97ada0",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1297b2a3_57f4e145",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-05-09T18:53:40Z",
+      "side": 1,
+      "message": "This is required to pair a Pebble watch (at least Pebble Time) on shiba, and likely all the 6 series and above, and maybe other devices. It is not required for Pixel 4a for some reason - just the Reland above - but it shouldn\u0027t hurt anything having this too for everything.",
+      "revId": "4983fbbe731c10542f106cf9df9f7c6fea97ada0",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
