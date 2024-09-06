@@ -44,6 +44,8 @@ import static java.util.Objects.requireNonNull;
 
 import android.annotation.NonNull;
 import android.annotation.Nullable;
+import android.app.AlarmManager;
+import android.app.AlarmManager.OnAlarmListener;
 import android.app.BroadcastOptions;
 import android.bluetooth.IAdapter;
 import android.bluetooth.IBluetoothCallback;
@@ -59,6 +61,7 @@ import android.content.ServiceConnection;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.database.ContentObserver;
 import android.os.Binder;
 import android.os.Bundle;
 import android.os.Handler;
@@ -96,6 +99,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Executor;
+import java.util.concurrent.RejectedExecutionException;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 import java.util.regex.Pattern;
@@ -148,6 +153,9 @@ class BluetoothManagerService {
     // and Airplane mode will have higher priority.
     @VisibleForTesting static final int BLUETOOTH_ON_AIRPLANE = 2;
 
+    // Settings.Global.BLUETOOTH_OFF_TIMEOUT
+    private static final String BLUETOOTH_OFF_TIMEOUT = "bluetooth_off_timeout";
+
     private final BleAppManager mBleAppManager;
     private final ActiveLogs mActiveLogs;
     private final BluetoothComponent mBluetoothComponent;
@@ -188,6 +196,9 @@ class BluetoothManagerService {
     private boolean mEnableExternal = false;
 
     private int mErrorRecoveryRetryCounter = 0;
+
+    private final HandlerExecutor mHandlerExecutor = new HandlerExecutor();
+    private boolean isAdapterConnected = false;
 
     // The code in mBluetoothCallback is running on Binder thread.
     // It must be posted on the local looper to prevent concurrent access.
@@ -566,6 +577,13 @@ class BluetoothManagerService {
                                             ? MESSAGE_RESTORE_USER_SETTING_OFF
                                             : MESSAGE_RESTORE_USER_SETTING_ON);
                         }
+                    } else if (ACTION_STATE_CHANGED.equals(action)) {
+                        setBluetoothTimeout();
+                    } else if ("android.bluetooth.adapter.action.CONNECTION_STATE_CHANGED".equals(action)) {
+                        int state = intent.getIntExtra("android.bluetooth.adapter.extra.CONNECTION_STATE", -1);
+                        Log.i(TAG, "Connection state changed: " + state);
+                        isAdapterConnected = state == 2; // STATE_CONNECTED
+                        setBluetoothTimeout();
                     } else if (action.equals(Intent.ACTION_SHUTDOWN)) {
                         Log.i(TAG, "Device is shutting down.");
                         mShutdownInProgress = true;
@@ -581,6 +599,18 @@ class BluetoothManagerService {
             };
 
     private final BluetoothManagerServiceApi mApi = new Api();
+
+    private final OnAlarmListener mBluetoothTimeoutListener = new OnAlarmListener() {
+        @Override
+        public void onAlarm() {
+            // Fetch adapter connection state synchronously and assume disconnected on error
+            if (mAdapter == null) return;
+
+            if (isEnabled() && !isAdapterConnected) {
+                disable(mContext.getAttributionSource().getPackageName(), /*persist*/ true);
+            }
+        }
+    };
 
     BluetoothManagerService(
             @NonNull Context context,
@@ -621,6 +651,8 @@ class BluetoothManagerService {
         }
 
         IntentFilter filter = new IntentFilter();
+        filter.addAction("android.bluetooth.adapter.action.CONNECTION_STATE_CHANGED");
+        filter.addAction(ACTION_STATE_CHANGED);
         filter.addAction(Intent.ACTION_SETTING_RESTORED);
         filter.addAction(Intent.ACTION_SHUTDOWN);
         filter.setPriority(IntentFilter.SYSTEM_HIGH_PRIORITY);
@@ -678,6 +710,15 @@ class BluetoothManagerService {
         mConfigAllowAutoOn =
                 SystemProperties.getBoolean("bluetooth.server.automatic_turn_on", false);
         Log.d(TAG, "AutoOn allowed by config=" + mConfigAllowAutoOn);
+
+        mContentResolver.registerContentObserver(Settings.Global.getUriFor(
+                BLUETOOTH_OFF_TIMEOUT), false,
+            new ContentObserver(null) {
+                @Override
+                public void onChange(boolean selfChange) {
+                    setBluetoothTimeout();
+                }
+            });
     }
 
     private class Api implements BluetoothManagerServiceApi {
@@ -818,6 +859,18 @@ class BluetoothManagerService {
         public void onBleScanDisabled() {
             enforceCorrectThread();
             BluetoothManagerService.this.onBleScanDisabled();
+        }
+    }
+
+    private void setBluetoothTimeout() {
+        long bluetoothTimeoutMillis = Settings.Global.getLong(mContext.getContentResolver(),
+            BLUETOOTH_OFF_TIMEOUT, 0);
+        AlarmManager alarmManager = mContext.getSystemService(AlarmManager.class);
+        alarmManager.cancel(mBluetoothTimeoutListener);
+        if (bluetoothTimeoutMillis != 0) {
+            final long timeout = SystemClock.elapsedRealtime() + bluetoothTimeoutMillis;
+            alarmManager.setExactAndAllowWhileIdle(AlarmManager.ELAPSED_REALTIME_WAKEUP, timeout,
+                TAG, mHandlerExecutor, null, mBluetoothTimeoutListener);
         }
     }
 
@@ -2444,5 +2497,14 @@ class BluetoothManagerService {
                                     PackageManager.DONT_KILL_APP);
                             Log.i(TAG, "Disabled component: " + componentName.flattenToString());
                         });
+    }
+
+    private class HandlerExecutor implements Executor {
+        @Override
+        public void execute(Runnable command) {
+            if (!mHandler.post(command)) {
+                throw new RejectedExecutionException(mHandler + " is shutting down");
+            }
+        }
     }
 }
