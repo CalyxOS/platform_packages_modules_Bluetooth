@@ -80,6 +80,7 @@ java_library {
         "bluetooth-proto-enums-java-gen",
         "bluetooth_flags_java_lib",
         "modules-utils-build_system",
+        "modules-utils-handlerexecutor",
         "modules-utils-shell-command-handler",
         "service-bluetooth-binder-aidl",
     ],
