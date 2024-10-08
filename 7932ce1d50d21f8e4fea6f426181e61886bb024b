@@ -16,6 +16,24 @@
       "message": "Bluetooth headset successfully pairs and plays audio. Not sure about Bluetooth HID devices. Regardless, Bluetooth is generally working.",
       "revId": "7932ce1d50d21f8e4fea6f426181e61886bb024b",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1f4fd576_666cf958",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-10-08T19:46:46Z",
+      "side": 1,
+      "message": "Speaker and BT mouse worked fine too.\n\nI was going to a test a keyboard as well but it won\u0027t show up to pair even without these changes, and I haven\u0027t used it for this before, so I won\u0027t go down a rabbit hole now lol.",
+      "parentUuid": "03e1e7f8_90222095",
+      "revId": "7932ce1d50d21f8e4fea6f426181e61886bb024b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
