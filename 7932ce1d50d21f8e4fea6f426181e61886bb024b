@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "03e1e7f8_90222095",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-10-08T14:19:33Z",
+      "side": 1,
+      "message": "Bluetooth headset successfully pairs and plays audio. Not sure about Bluetooth HID devices. Regardless, Bluetooth is generally working.",
+      "revId": "7932ce1d50d21f8e4fea6f426181e61886bb024b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
