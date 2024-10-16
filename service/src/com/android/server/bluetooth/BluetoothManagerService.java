@@ -1,4 +1,4 @@
-/*
+//*
  * Copyright (C) 2012 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -712,9 +712,8 @@ class BluetoothManagerService {
         }
 
         { // AutoOn feature initialization of flag guarding
-            final boolean autoOnFlag = Flags.autoOnFeature();
-            final boolean autoOnProperty =
-                    SystemProperties.getBoolean("bluetooth.server.automatic_turn_on", false);
+            final boolean autoOnFlag = false;
+            final boolean autoOnProperty = false;
             Log.d(TAG, "AutoOnFeature status: flag=" + autoOnFlag + ", property=" + autoOnProperty);
 
             mDeviceConfigAllowAutoOn = autoOnFlag && autoOnProperty;
