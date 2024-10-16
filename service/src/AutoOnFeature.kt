@@ -269,7 +269,7 @@ private constructor(
  * @return whether the auto on feature is enabled for this user
  */
 private fun isFeatureEnabledForUser(resolver: ContentResolver): Boolean {
-    return Settings.Secure.getInt(resolver, USER_SETTINGS_KEY, 0) == 1
+    return false
 }
 
 /**
@@ -278,7 +278,7 @@ private fun isFeatureEnabledForUser(resolver: ContentResolver): Boolean {
  * @return whether the auto on feature is supported for the user
  */
 private fun isFeatureSupportedForUser(resolver: ContentResolver): Boolean {
-    return Settings.Secure.getInt(resolver, USER_SETTINGS_KEY, -1) != -1
+    return false
 }
 
 /**
