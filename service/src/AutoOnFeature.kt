@@ -103,7 +103,7 @@ public fun notifyBluetoothOn(context: Context) {
     timer = null
 
     if (!isFeatureSupportedForUser(context.contentResolver)) {
-        val defaultFeatureValue = true
+        val defaultFeatureValue = false
         if (!setFeatureEnabledForUserUnchecked(context, defaultFeatureValue)) {
             Log.e(TAG, "Failed to set feature to its default value ${defaultFeatureValue}")
         } else {
@@ -269,7 +269,7 @@ private constructor(
  * @return whether the auto on feature is enabled for this user
  */
 private fun isFeatureEnabledForUser(resolver: ContentResolver): Boolean {
-    return Settings.Secure.getInt(resolver, USER_SETTINGS_KEY, 0) == 1
+    return false
 }
 
 /**
@@ -278,7 +278,7 @@ private fun isFeatureEnabledForUser(resolver: ContentResolver): Boolean {
  * @return whether the auto on feature is supported for the user
  */
 private fun isFeatureSupportedForUser(resolver: ContentResolver): Boolean {
-    return Settings.Secure.getInt(resolver, USER_SETTINGS_KEY, -1) != -1
+    return false
 }
 
 /**
@@ -288,21 +288,5 @@ private fun isFeatureSupportedForUser(resolver: ContentResolver): Boolean {
  */
 @RequiresApi(Build.VERSION_CODES.VANILLA_ICE_CREAM)
 private fun setFeatureEnabledForUserUnchecked(context: Context, status: Boolean): Boolean {
-    val ret =
-        Settings.Secure.putInt(context.contentResolver, USER_SETTINGS_KEY, if (status) 1 else 0)
-    if (ret) {
-        context.sendBroadcast(
-            Intent(ACTION_AUTO_ON_STATE_CHANGED)
-                .addFlags(Intent.FLAG_RECEIVER_REGISTERED_ONLY)
-                .putExtra(
-                    EXTRA_AUTO_ON_STATE,
-                    if (status) AUTO_ON_STATE_ENABLED else AUTO_ON_STATE_DISABLED
-                ),
-            android.Manifest.permission.BLUETOOTH_PRIVILEGED,
-            BroadcastOptions.makeBasic()
-                .setDeferralPolicy(BroadcastOptions.DEFERRAL_POLICY_UNTIL_ACTIVE)
-                .toBundle(),
-        )
-    }
-    return ret
+    return 0
 }
