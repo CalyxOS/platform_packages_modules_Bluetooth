@@ -712,9 +712,8 @@ class BluetoothManagerService {
         }
 
         { // AutoOn feature initialization of flag guarding
-            final boolean autoOnFlag = Flags.autoOnFeature();
-            final boolean autoOnProperty =
-                    SystemProperties.getBoolean("bluetooth.server.automatic_turn_on", false);
+            final boolean autoOnFlag = false;
+            final boolean autoOnProperty = false;
             Log.d(TAG, "AutoOnFeature status: flag=" + autoOnFlag + ", property=" + autoOnProperty);
 
             mDeviceConfigAllowAutoOn = autoOnFlag && autoOnProperty;
