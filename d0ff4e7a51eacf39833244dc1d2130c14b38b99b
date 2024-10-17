@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ed5fb506_ae691679",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2024-10-17T04:28:02Z",
+      "side": 1,
+      "message": "Suggested alternative to this and device config https://review.calyxos.org/c/CalyxOS/vendor_calyx/+/31675",
+      "revId": "d0ff4e7a51eacf39833244dc1d2130c14b38b99b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
