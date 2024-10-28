@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4f72fdd6_84ed28af",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-10-28T14:16:22Z",
+      "side": 1,
+      "message": "`getAttributionSource()` is `@NonNull` so it\u0027s safe to assume that calling `getPackageName()` on it directly is fine.",
+      "revId": "c30968131a46331c73a3b238c41ddb512f03a8e7",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
