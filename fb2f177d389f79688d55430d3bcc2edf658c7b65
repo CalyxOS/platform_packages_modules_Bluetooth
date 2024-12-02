@@ -16,6 +16,24 @@
       "message": "sunfish BT audio is broken",
       "revId": "fb2f177d389f79688d55430d3bcc2edf658c7b65",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cab11a15_da98a333",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-12-02T21:36:48Z",
+      "side": 1,
+      "message": "Fine after reboot",
+      "parentUuid": "6ef22d5d_306c4bd3",
+      "revId": "fb2f177d389f79688d55430d3bcc2edf658c7b65",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
