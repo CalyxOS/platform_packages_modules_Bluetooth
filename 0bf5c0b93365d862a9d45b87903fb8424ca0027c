@@ -16,6 +16,23 @@
       "message": "fixed bt crash for me on pipa",
       "revId": "0bf5c0b93365d862a9d45b87903fb8424ca0027c",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fc14552d_12322eb2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-02-04T13:11:55Z",
+      "side": 1,
+      "message": "Since none of our current devices / setup need this, and we may have to tweak and test our signing setup to account for this, we won\u0027t be merging this.",
+      "revId": "0bf5c0b93365d862a9d45b87903fb8424ca0027c",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
