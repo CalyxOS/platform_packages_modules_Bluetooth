@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d4e9a069_8da8fc51",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-03-26T18:55:50Z",
+      "side": 1,
+      "message": "```\npackages/modules/Bluetooth/system/stack/sdp/sdp_discovery.cc:603:7: error: use of undeclared identifier \u0027SDP_TRACE_WARNING\u0027\n  603 |       SDP_TRACE_WARNING(\n      |       ^\n```",
+      "revId": "e0797e9e5f12909a0b4aa0ab242efad6a38f0c69",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
