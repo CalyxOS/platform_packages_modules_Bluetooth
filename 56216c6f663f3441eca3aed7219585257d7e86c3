@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8ac4e979_38ac29a5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2025-06-04T12:11:20Z",
+      "side": 1,
+      "message": "flags/security.aconfig \u0026 system/bta/av/bta_av_aact.cc have been resolved according to QPR2\n\nsystem/stack/btm/btm_ble_sec.cc has been resolved according to AOSP main commits mentioned in d33196b5 Backport regression fixes for 288144143",
+      "revId": "56216c6f663f3441eca3aed7219585257d7e86c3",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
