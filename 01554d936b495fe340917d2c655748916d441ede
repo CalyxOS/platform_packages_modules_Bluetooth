@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a25adb56_bbae5307",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2025-07-28T19:22:01Z",
+      "side": 1,
+      "message": "I have used Bluetooth frequently (am using it right now) and I have verified Bluetooth timeout works as well, so this should be good to go.",
+      "revId": "01554d936b495fe340917d2c655748916d441ede",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
