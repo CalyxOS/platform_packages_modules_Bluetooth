@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e0886237_16ccb988",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000003
+      },
+      "writtenOn": "2026-03-18T20:48:44Z",
+      "side": 1,
+      "message": "I think we need to revert this. Spent some hours looking into it and it seems AOSP completely separated the `BluetoothManagerService` from the Adapter. You can\u0027t even import `android.bluetooth.BluetoothAdapter` anymore.\n\nAlso there does not seem to be a way to get the connection state from the service.\nEither we find a way to make the adapter accessible or we need to consider implementing this somewhere else. A possible candidate is `AdapterService` that should have more access.\n\nHowever, in the short term, it may be better to remove the feature and re-evaluate.",
+      "revId": "af1fb06d937d76b91d1849bef8e690438e8a4a81",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
