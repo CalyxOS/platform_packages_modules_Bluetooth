@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "36f4c8d9_bbaebad3",
+        "filename": "service/src/com/android/server/bluetooth/BluetoothManagerService.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 582,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2026-04-06T22:42:39Z",
+      "side": 1,
+      "message": "This should be defined as a constant in this file with a comment referencing its original definition",
+      "range": {
+        "startLine": 582,
+        "startChar": 31,
+        "endLine": 582,
+        "endChar": 90
+      },
+      "revId": "3080324bc42b452c78cde4af6b674118c71679a9",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4122b9f0_ec703d52",
+        "filename": "service/src/com/android/server/bluetooth/BluetoothManagerService.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 583,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2026-04-06T22:42:39Z",
+      "side": 1,
+      "message": "Same as above",
+      "range": {
+        "startLine": 583,
+        "startChar": 55,
+        "endLine": 583,
+        "endChar": 105
+      },
+      "revId": "3080324bc42b452c78cde4af6b674118c71679a9",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "74b10e98_7262fdc3",
+        "filename": "service/src/com/android/server/bluetooth/BluetoothManagerService.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 585,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2026-04-06T22:42:39Z",
+      "side": 1,
+      "message": "Same as above",
+      "range": {
+        "startLine": 585,
+        "startChar": 54,
+        "endLine": 585,
+        "endChar": 75
+      },
+      "revId": "3080324bc42b452c78cde4af6b674118c71679a9",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
